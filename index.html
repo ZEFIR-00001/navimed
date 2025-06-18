@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навигатор пациента</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/downdrop.css">
+    <link rel="stylesheet" href="./css/navig.css">
+    <link rel="stylesheet" href="./css/responsiv.css">
+</head>
+<body>
+    <header>
+        <img src="./img/logo.png" alt="ggg">
+    </header>
+
+    <div class="row-nav">
+
+        <nav class="main-nav">
+            <div class="nav-left">
+                <div>
+                    <button class="nav-btn">Проверить запись</button>
+                    <button class="nav-btn">Расписание</button>
+                </div>
+                
+                <div>
+                    <button class="nav-btn">Карта поликлиники</button>
+                    <button class="nav-btn">Запись</button>
+                </div>
+                
+            </div>
+        
+            <div class="nav-right">
+                <button class="nav-btn login-btn">Вход</button>
+                <button class="nav-btn menu-btn">
+                    <span class="menu-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="section-row section-main">
+            <div class="disp-main">
+                <h3>Проводи диспансеризацию – береги здоровье вовремя!</h3>
+                <img src="" alt="">
+                <ul>
+                    <li>Бесплатно</li>
+                    <li>Быстро и удобно</li>
+                    <li>Проверь основные показатели здоровья</li>
+                </ul>
+                <p><strong>Узнай о своём состоянии и </strong></p>
+                <p><strong>предотврати болезни на ранней стадии!</strong></p>
+                <p><strong>Запишись в регистратуре или через сайт</strong></p>
+                <p><strong>Время для здоровья есть!</strong></p>
+                <p><strong>Ваше здоровье – наша забота!</strong></p>
+            </div>
+
+            <form id="appointmentForm" action="" class="form-style">
+                <h2 class="form-title">ЗАПИСЬ</h2>
+
+                <div class="form-columns">
+                    <div class="form-left">
+                        <div class="form-group form-label-input-column">
+                            <label for="fullName">ФИО</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+            
+                        <div class="form-group form-label-input-column">
+                            <label for="policy">НОМЕР ПОЛИСА</label>
+                            <input type="text" id="policy" name="policy" placeholder="0000 0000 0000 0000" maxlength="19"  autocomplete="off">
+                        </div>
+            
+                        <div class="form-group form-label-input-column">
+                            <label for="birthDate">ДАТА РОЖДЕНИЯ</label>
+                            <input type="date" id="birthDate" name="birthDate" required>
+                        </div>
+            
+                        <div class="form-group form-label-input-column">
+                            <label for="phone">КОНТАКТНЫЙ НОМЕР</label>
+                            <input type="tel" id="phone" name="phone" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7 (000)-000-00-00" required>
+                        </div>
+            
+                        <div class="form-group form-label-input-column">
+                            <label for="email">E-MAILE</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                        </div>
+                    </div>
+
+                    <div class="form-right">
+                        <div class="form-group">
+                            <label for="specialist"></label>
+                            <div class="dropdown">
+                                <input type="text" id="specialist" name="specialist" placeholder="Выберите специалиста" readonly>
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">Терапевт</div>
+                                    <div class="dropdown-item">Хирург</div>
+                                    <div class="dropdown-item">Офтальмолог</div>
+                                    <div class="dropdown-item">Невролог</div>
+                                    <div class="dropdown-item">Кардиолог</div>
+                                    <div class="dropdown-item">Отоларинголог</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-group form-label-input-column">
+                                <label for="appointmentDate">ЖЕЛАЙМАЯ ДАТА</label>
+                                <input type="date" id="appointmentDate" name="appointmentDate" required>
+                            </div>
+                
+                            <div class="form-group form-label-input-column">
+                                <label for="appointmentTime">ЖЕЛАЙМОЕ ВРЕМЯ</label>
+                                <input type="time" id="appointmentTime" name="appointmentTime" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </section>
+
+
+    </div>
+
+    
+    <footer class="foot-content">
+
+        <div class="section-row">
+            <div class="back-color-f-item border-radius-f-item footer-item-margin">
+                <h4>КОНТАКТЫ</h4>
+                <p>телефон: + 7 (473) 210-04-95</p>
+                <p>e-mail: mail@gkb11.zdrav36.ru</p>
+            </div>
+
+            <div class="back-color-f-item border-radius-f-item footer-item-margin">
+                <h4>РУКОВОДИТЕЛЬ</h4>
+                <p>Слюсерев Евгений Александрович</p>
+            </div>
+
+            <div class="back-color-f-item border-radius-f-item footer-item-margin">
+                <h4>АДРЕС</h4>
+                <p>394042, г.Воронеж, Переверткина 16А</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        // Маска телефона
+        document.getElementById("phone").addEventListener("input", function(e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            e.target.value = !x[2] ? '+7' : '+7 (' + x[2] + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+        });
+    </script>
+    <script src="./javaScript/dropdown.js"></script>
+    <script src="./javaScript/form-validation.js"></script>
+    <script src="./javaScript/navig.js"></script>
+</body>
+</html>

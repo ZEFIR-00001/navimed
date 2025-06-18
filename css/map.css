@@ -1,0 +1,31 @@
+body {
+    background-color: #CCD9DD;
+    padding: 0px;
+    bottom: 0px;
+    margin: 0px;
+}
+footer {
+    background-color: #00729C;
+}
+.back-color-f-item {
+    background-color: #4ECCFA;
+}
+.border-radius-f-item {
+    border-radius: 25px;
+}
+.footer-item-margin {
+    margin: 25px;
+    padding: 10px;
+    place-items: center;
+}
+.foot-content {
+    place-items: center;
+}
+.section-row {
+    display: flex;
+    flex-direction: row;
+}
+header {
+    background-color: #4ECCFA;
+    height: 90px;
+}

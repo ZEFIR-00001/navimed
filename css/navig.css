@@ -1,0 +1,78 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    background-color: #4ECCFA;
+    border-radius: 25px;
+    margin: 20px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 25%);
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-left > div {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* Основные стили кнопок */
+.nav-btn {
+    min-width: 180px; /* Фиксированная минимальная ширина */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #e9ecef;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+    height: 40px; /* Фиксированная высота */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px rgba(0, 0, 0, 25%);
+}
+
+/* Стили для активной кнопки */
+.nav-btn.active {
+    background-color: #0d6efd;
+    color: white;
+    box-shadow: 4px 4px rgba(0, 0, 0, 25%);
+}
+
+/* Стили для кнопки входа */
+.login-btn {
+    background-color: #e9ecef;
+    color: rgb(0, 0, 0);
+    min-width: 80px; /* Можно сделать уже, если нужно */
+}
+
+/* Стили для кнопки меню */
+.menu-btn {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
