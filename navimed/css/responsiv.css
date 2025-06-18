@@ -1,0 +1,93 @@
+@media (max-width: 1200px) {
+    .form-style {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .row-nav {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .disp-main {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-row {
+        flex-direction: column;
+    }
+    .form-columns {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-left, .form-right {
+        width: 100%;
+    }
+    
+    .dropdown {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+        section {
+        place-items: center;
+    }
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    
+    .nav-left {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .nav-left.active {
+        display: flex;
+    }
+    
+    .nav-left > div {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .nav-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    
+    .menu-btn {
+        position: relative;
+    }
+    
+    .menu-btn::before {
+        content: "☰";
+        font-size: 24px;
+    }
+    
+    .menu-btn.active::before {
+        content: "×";
+    }
+    
+    .nav-btn {
+        width: 100%;
+        min-width: auto;
+        box-sizing: border-box;
+    }
+    
+    .section-row.footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-item-margin {
+        margin: 10px 0;
+    }
+}
